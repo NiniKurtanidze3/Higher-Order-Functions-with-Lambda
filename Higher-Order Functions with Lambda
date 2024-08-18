@@ -1,0 +1,20 @@
+def apply_to_numbers(numbers, operation):
+    return [operation(number) for number in numbers if operation(number) is not None]
+
+
+number_list = [1, 2, 3, 4, 5]
+number_list1 = [2, 4, 6, 8, 10]
+number_list2 = [11, 12, 13, 14]
+print(f"Input: {number_list}  Doubled: {apply_to_numbers(number_list, lambda n: n * 2)}")
+print(f"Input: {number_list1}  Squared: {apply_to_numbers(number_list1, lambda nu: nu ** 2)}")
+print(f"Input: {number_list2}  Odd Numbers: {apply_to_numbers(number_list2,lambda num: num if num % 2 != 0 else None)}")
+
+
+
+
+
+
+
+
+
+
